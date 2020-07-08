@@ -10,3 +10,20 @@
             javafx.controls,javafx.fxml
             --add-exports
             javafx.graphics/com.sun.javafx.sg.prism=ALL-UNNAMED
+2. Adicionar arquivo CSS
+    2.1. Criar um arquivo .css, dentro do diretório desejado
+        2.1.1. Adicionar a classe e as propriedades
+            Ex.:
+                .conteudo{
+                    -fx-background-color: red;
+                }
+    2.2. Na classe desejada, fazer a implementação do CSS
+        2.2.1. Importar o arquivo
+            Ex.:
+                String caminhoDoCss = getClass().getResource("/basico/Contador.css").toExternalForm();
+            2.2.1.1. toExternalForm() significa que vai pegar o caminho path completo
+        2.2.2. Aplicar a FOLHA de estilo ao objeto
+            Ex.:
+                cenaPrincipal.getStylesheets().add(caminhoDoCss);
+        2.2.3. Aplicar a CLASSE de estilo ao objeto
+            Ex.: boxConteudo.getStyleClass().add("conteudo");
