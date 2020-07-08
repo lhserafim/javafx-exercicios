@@ -21,6 +21,7 @@ public class Contador extends Application {
         labelNumero.getStyleClass().add("numero");
 
         Button botaoDecremento = new Button("-");
+        botaoDecremento.getStyleClass().add("botoes");
         // .setOnAction() é o evento que será disparado, ao clicar no botão
         botaoDecremento.setOnAction(e -> {
             contador--;
@@ -28,6 +29,7 @@ public class Contador extends Application {
         });
 
         Button botaoIncremento = new Button("+");
+        botaoIncremento.getStyleClass().add("botoes");
         botaoIncremento.setOnAction(e -> {
             contador++;
             labelNumero.setText(Integer.toString(contador));
